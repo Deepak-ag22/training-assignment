@@ -1,0 +1,42 @@
+Addition function :
+function func() {
+  console.log(arguments);
+  var sum = 0
+  for (let i = 0; i < arguments.length; i++) {
+           var a=arguments[i];
+            if(a instanceof Array)
+            {
+                for(var j=0; j<a.length; j++)
+                sum+=add1(a[j]);
+            }
+          if(typeof(arguments[i])=='number' && isfinite(argument[i]) && argument[i]!=NaN) sum += arguments[i];
+      }
+   return sum;
+}
+prime no :
+function cp(num) {
+  var sq=Math.floor(Math.sqrt(num));
+  var prime=true;
+  if(num==1)
+      prime=false;
+  for(var i=2; i<sq+1; i++){
+        if(num % i == 0) {
+            prime = false;
+            break;
+        }
+    }
+    return prime;
+}
+
+armstrong number:
+function arms(z){
+ var sum=0;
+ var temp=z;
+ while(temp>0){
+    var rem=temp%10;
+    sum+=(rem*rem*rem);
+    temp=parseInt(temp/10);
+ }
+if(sum==z) console.log("armstrong no");
+else console.log("not armstrong");
+}
