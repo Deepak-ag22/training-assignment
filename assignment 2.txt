@@ -1,0 +1,62 @@
+question 1:
+function add(..args)
+{
+    var sum=0;
+    for(var y of args)
+        {
+            var x=y;
+            if(x instanceof Function)
+                x=add1(x());
+            if(x instanceof Array)
+            {
+                for(var j=0; j<x.length; j++)
+                sum+=add(x[j]);
+            }
+            else if(isFinite(x))
+                if(typeof(x)=='number')
+                    sum+=x;
+                else if(typeof(x)=='string')
+                    sum+=parseInt(x);
+        }
+    return sum;
+}
+
+question 2:
+function add(..restpar)
+{
+    var sum=0;
+    for(var y of restpar)
+        {
+            var x=y;
+            if(x instanceof Function)
+                x=add1(x());
+            if(x instanceof Array)
+            {
+                for(var j=0; j<x.length; j++)
+                sum+=add(x[j]);
+            }
+            else if(isFinite(x))
+                if(typeof(x)=='number')
+                    sum+=x;
+                else if(typeof(x)=='string')
+                    sum+=parseInt(x);
+        }
+    return sum;
+}
+question 4:
+function gettimming(){
+     var d= new Date();
+     var hour= d.getHours();
+     var flag= ((hour<12)? 'AM':'PM');
+     hour=hour%12;
+     if(hour==0) hour=12;
+     var months= ['sun','mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+     console.log(`Today is: ${months[d.getDay()]}`);
+     console.log(`Time is ${hour} ${flag} : ${d.getMinutes()} : ${d.getSeconds()}`);
+}
+question 5:
+var d= new Date();
+console.log("Date today is: "+d.getDay()+"-"+d.getMonth()+ '-' +d.getFullYear());
+console.log(`"Date today is: "+d.getDay()+"/"+d.getMonth()+ '/' +d.getFullYear()`);
+console.log(`"Date today is: "+d.getDay()+"."+d.getMonth()+ '.' +d.getFullYear()`);
+}
