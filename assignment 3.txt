@@ -1,0 +1,146 @@
+assignment 3::
+
+question 1:
+function periarea(){
+   let x=parseFloat(prompt("enter length"));
+   let y=parseFloat(prompt("enter breadth"));
+   if(x && y){
+   let area=x*y;
+   let per=2*(x+y);
+   console.log("area is");
+   console.log(area);
+   console.log("peri is");
+   console.log(peri);
+   }else
+       console.log("INVALID INPUT");
+   }
+ (or to continue till valid input entered)
+ function periarea(){
+   let x,y;
+   do{
+    x=parseFloat(prompt("enter length"));
+    }while(!x)
+   do{
+    y=parseFloat(prompt("enter breadth"));
+   }while(!y) 
+   let area=x*y;
+   let per=2*(x+y);
+   console.log("area is");
+   console.log(area);
+   console.log("peri is");
+   console.log(per);
+   }
+named:
+ const ff=function periarea(){
+   let x=parseFloat(prompt("enter length"));
+   let y=parseFloat(prompt("enter breadth"));
+   if(x && y){
+   let area=x*y;
+   let per=2*(x+y);
+   console.log("area is");
+   console.log(area);
+   console.log("peri is");
+   console.log(peri);
+   }else
+       console.log("INVALID INPUT");
+   }
+anonymous:
+const ff=function(){
+   let x=parseFloat(prompt("enter length"));
+   let y=parseFloat(prompt("enter breadth"));
+   if(x && y){
+   let area=x*y;
+   let per=2*(x+y);
+   console.log("area is");
+   console.log(area);
+   console.log("peri is");
+   console.log(peri);
+   }else
+       console.log("INVALID INPUT");
+   }
+arrow fn:
+const ff=()=>{
+   let x=parseFloat(prompt("enter length"));
+   let y=parseFloat(prompt("enter breadth"));
+   if(x && y){
+   let area=x*y;
+   let per=2*(x+y);
+   console.log("area is");
+   console.log(area);
+   console.log("peri is");
+   console.log(peri);
+   }else
+       console.log("INVALID INPUT");
+   }
+question 2:
+function gettime(){
+     var d= new Date();
+     var hour= d.getHours();
+     var flag= ((hour<12)? 'AM':'PM');
+     hour=hour%12;
+     if(hour==0) hour=12;
+     var months= ['sun','mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+     console.log(`Today is: ${months[d.getDay()]}`);
+     console.log(`Time is ${hour} ${flag} : ${d.getMinutes()} : ${d.getSeconds()}`);
+}
+
+Anonymous:
+ const z= function(){
+     var d= new Date();
+     var hour= d.getHours();
+     var flag= ((hour<12)? 'AM':'PM');
+     hour=hour%12;
+     if(hour==0) hour=12;
+     var months= ['sun','mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+     console.log(`Today is: ${months[d.getDay()]}`);
+     console.log(`Time is ${hour} ${flag} : ${d.getMinutes()} : ${d.getSeconds()}`);
+}
+
+Named fn:
+const z= function gettime(){
+     var d= new Date();
+     var hour= d.getHours();
+     var flag= ((hour<12)? 'AM':'PM');
+     hour=hour%12;
+     if(hour==0) hour=12;
+     var months= ['sun','mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+     console.log(`Today is: ${months[d.getDay()]}`);
+     console.log(`Time is ${hour} ${flag} : ${d.getMinutes()} : ${d.getSeconds()}`);
+};
+
+arrow fn: 
+const arrowgettime= ()=>{
+     var d= new Date();
+     var hour= d.getHours();
+     var flag= ((hour<12)? 'AM':'PM');
+     hour=hour%12;
+     if(hour==0) hour=12;
+     var months= ['sun','mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+     console.log(`Today is: ${months[d.getDay()]}`);
+     console.log(`Time is ${hour} ${flag} : ${d.getMinutes()} : ${d.getSeconds()}`);
+}
+
+question 3:
+ function:
+function getDate(){
+var d= new Date();
+console.log(`"Date today is: "+d.getDay()+"/"+d.getMonth()+ '/' +d.getFullYear()`);
+}
+
+Anonymous fn:
+const x=function(){
+var d= new Date();
+console.log(`"Date today is: "+d.getDay()+"/"+d.getMonth()+ '/' +d.getFullYear()`);
+}
+
+named fn:
+const x=function getDate(){
+var d= new Date();
+console.log(`"Date today is: "+d.getDay()+"/"+d.getMonth()+ '/' +d.getFullYear()`);
+}
+
+Arrow fn:
+const arrowGDate= () => {
+var d= new Date();
+console.log(`"Date today is: "+d.getDay()+"/"+d.getMonth()+ '/' +d.getFullYear()`);
+}
