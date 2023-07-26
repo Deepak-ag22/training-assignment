@@ -106,7 +106,7 @@ const z= function gettime(){
      var months= ['sun','mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
      console.log(`Today is: ${months[d.getDay()]}`);
      console.log(`Time is ${hour} ${flag} : ${d.getMinutes()} : ${d.getSeconds()}`);
-};
+}
 
 arrow fn: 
 const arrowgettime= ()=>{
