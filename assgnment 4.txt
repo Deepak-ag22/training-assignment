@@ -1,0 +1,48 @@
+arrow fun shorten the code(short hand code)
+for single line fn
+pure fn(not work like fun constructor i.e we can't create an object)
+arrow function(read!);
+lexical this it use
+not behave like fn cons. (can't create objects using arroe fn)
+
+assignment 3:
+1. Create an Array of Salaries, Now do the Sum of Salaries who is greater than 10000.
+Hint : reduce function
+
+2. Get the Max Salary from the Array
+Hint : reduce function
+
+3. Count Those Salaries whose > 10000, note : don't use filter.
+Hint : reduce function
+
+4. Maintain an Array of Employees. (Array of Objects), Now Sort the Employee by Name and Salary.
+
+5. In Employee Salaries add 10% Tax in Each Employee Salary and Store in a new Array, So don't modify the Orginal Array.
+Hint : filter, map 
+soltuions.....
+1.
+var sal=[10000,20000,15000,60000,5000,90000];
+let ans=sal.reduce((acc,curr,index)=>(curr>10000)?acc+curr:acc,0);
+console.log(ans);
+2.
+let sal=[10000,20000,15000,60000,5000,90000];
+let ans=sal.reduce((acc,curr,index)=>(curr>acc)?curr:acc,0);
+console.log(ans);
+3.
+let sal=[10000,20000,15000,60000,5000,90000];
+let ans=sal.reduce((acc,curr,index)=>(curr>10000)?++acc:acc,0);
+console.log(ans);
+4.
+let emp1={name:'Deepak',sal:1000000};
+let emp2={name:'aayush',sal:2000000};
+let emp3={name:'saksham',sal:1900000};
+let emp4={name:'shivam',sal:5688889};
+let emp=[emp1,emp2,emp3,emp4];
+emp.sort((a,b)=>a.name.localeCompare(b.name));
+emp.sort((a,b)=>a.sal-b.sal);
+console.log(emp);
+5.
+let sal=[10000,20000,15000,60000,5000,90000];
+let newarr=sal.map((e)=>e+e*0.1);
+console.log(newarr);
+console.log(sal);
