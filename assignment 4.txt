@@ -1,10 +1,3 @@
-arrow fun shorten the code(short hand code)
-for single line fn
-pure fn(not work like fun constructor i.e we can't create an object)
-arrow function(read!);
-lexical this it use
-not behave like fn cons. (can't create objects using arroe fn)
-
 assignment 3:
 1. Create an Array of Salaries, Now do the Sum of Salaries who is greater than 10000.
 Hint : reduce function
